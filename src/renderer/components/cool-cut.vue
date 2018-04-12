@@ -1,5 +1,5 @@
 <template>
-  <div id="cool-cut" class="cool-cut-view">
+  <div class="cool-cut">
     <div class="preview">预览区</div>
     <div class="layer">
       <div class="layer-tree">
