@@ -2,8 +2,8 @@
   <div id="app">
     <transition name="component">
       <welcome v-if="welcomeing" @welcomend="welcomend" />
-      <cool-cut v-else-if="file" />
-      <add-file v-else />
+      <cool-cut v-else-if="file" :file="file" />
+      <add-file v-else @file-change="fileChage" />
     </transition>
   </div>
 </template>
@@ -28,6 +28,10 @@
     methods: {
       welcomend () {
         this.welcomeing = false
+      },
+      fileChage (file) {
+        this.file = file
+        // console.log('可以开始分析文件啦', file)
       }
     }
   }

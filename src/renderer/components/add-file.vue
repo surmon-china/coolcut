@@ -1,7 +1,7 @@
 <template>
   <div class="add-file">
     <div class="upload">
-      <input class="file-input" id="xFile" type="file" ref="file" />
+      <input class="file-input" id="xFile" type="file" ref="file" @change="fileChange"/>
       <label class="file-up-btn" for="xFile">添加文件</label>
       <p class="state" v-if="state">
         <span v-if="state === 1">上传中</span>
@@ -22,7 +22,10 @@
     mounted () {
     },
     methods: {
-
+      fileChange (event) {
+        // console.log('选择文件啦', event)
+        this.$emit('file-change', event.target.files[0])
+      }
     }
   }
 </script>

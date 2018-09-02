@@ -12,6 +12,12 @@
   </head>
   <body>
     <div id="app"></div>
+    <script type="text/javascript">
+      console.log(require('path').join(__dirname, ''))
+    </script>
+    <script type="text/javascript">
+      // require(require('path').join(__dirname, '../node_modules/psd/dist/psd.min.js'))
+    </script>
     <!-- Set `__static` path to static files in production -->
     <script>
       if (process.env.NODE_ENV !== 'development') window.__static = require('path').join(__dirname, '/static').replace(/\\/g, '\\\\')

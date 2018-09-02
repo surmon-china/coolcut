@@ -11,10 +11,16 @@
 
 <script>
   import LayerTree from './layer-tree'
+  // const PSD = require('psd')
+  // console.log('PSD', PSD)
   export default {
     name: 'cool-cut',
+    props: ['file'],
     components: {
       LayerTree
+    },
+    mounted () {
+      console.log('cool-cut 哈哈哈哈，在这里分析读取文件了', this.file)
     }
   }
 </script>
